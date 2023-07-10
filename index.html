@@ -317,7 +317,7 @@
     <section class="flex flex-col justify-center items-center">
         <h1  class="text-3xl lg:text-5xl my-8 text-center text-violet-900"> What Our Users Say</h1>
         <div class="flex w-11/12 flex-row  justify-center items-center">
-        <i onclick="toogle()"  class="fa fa-angle-left text-5xl  text-violet-300 hover:text-violet-300" aria-hidden="true"></i>
+        <i onclick="toogle1()"  class="fa fa-angle-left text-5xl  text-violet-300 hover:text-violet-300" aria-hidden="true"></i>
         <div class="flex flex-row justify-center items-center">
             <div class=" display1 flex flex-col w-11/12 lg:w-9/12 justify-center items-center">
                 <img class="w-52 my-6 h-52 rounded-full hover:"  src="./team2.jpg" alt="">
@@ -330,7 +330,7 @@
                 <h1 class="text-1xl mb-12 text-violet-900">Jonh Manson</h1>
             </div>
         </div>
-        <i onclick="toogle()"  class="fa fa-angle-right text-5xl text-violet-300 hover:text-violet-300" aria-hidden="true"></i>
+        <i onclick="toogle1()"  class="fa fa-angle-right text-5xl text-violet-300 hover:text-violet-300" aria-hidden="true"></i>
     </div>
     </section>
     <section class="flex flex-col my-16 lg:flex-row  w-screen justify-center lg:justify-between items-center">
@@ -437,21 +437,30 @@
             abc.classList.add('hidden')
             xyz.classList.add('hidden')
             document.querySelector(".display2").classList.add('hidden')
-        function toogle(){
+         function toogle(){
             
             if(a==true) {
              abc.classList.add('hidden')
              xyz.classList.add('hidden')
-             document.querySelector(".display2").classList.add('hidden')
-
- document.querySelector(".display1").classList.remove('hidden')
+            
              a=false;
             }else{
                 abc.classList.remove('hidden')
                 xyz.classList.remove('hidden')
+              
+                
+                a=true;
+            }
+        }
+       function toogle1(){
+            if(a==true){
+                document.querySelector(".display2").classList.add('hidden')
+
+document.querySelector(".display1").classList.remove('hidden')
+a=false;
+            }else{
                 document.querySelector(".display1").classList.add('hidden')
                 document.querySelector(".display2").classList.remove('hidden')
-                
                 a=true;
             }
         }
